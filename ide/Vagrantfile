@@ -1,0 +1,10 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ronbo-test"
+  config.vm.box_url = "http://home.comcast.net/~kurr/vagrant/precise64.box"
+  config.vm.network :forwarded_port, guest: 80, host: 8080
+  config.vm.provision "shell", path: "update-apt.sh"
+  config.vm.provision "shell", path: "install-xfce.sh"
+end
