@@ -2,7 +2,6 @@
 
 # always do these steps
 aptitude update
-aptitude -y upgrade
 
 # make sure we are idempotent
 if [ -f "/var/vagrant_provision" ]; then
