@@ -14,5 +14,8 @@ aptitude install -y apache2
 rm -rf /var/www
 ln -fs /vagrant /var/www
 
+echo "Installing Webmin..."
+aptitude install -y webmin
+
 # signal a successful provision
 touch /var/vagrant_provision
