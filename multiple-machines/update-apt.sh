@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-aptitude update
+aptitude update >/dev/null 2>&1
