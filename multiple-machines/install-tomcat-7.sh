@@ -18,7 +18,7 @@ if [ -f "${CACHE}/${ARCHIVE}" ]; then
     echo "Tomcat archive already cached. Not downloading." 
 else
     echo "Downloading Tomcat 7..."
-    wget --quiet --output-document=${CACHE}/${ARCHIVE} http://home.comcast.net/~kurr/vagrant/apache-tomcat-7.0.42.tar.gz
+    wget --quiet --output-document=${CACHE}/${ARCHIVE} http://apache.mesi.com.ar/tomcat/tomcat-7/v7.0.42/bin/apache-tomcat-7.0.42.tar.gz 
 fi
 
 mkdir -p ${TOMCATDIR}
