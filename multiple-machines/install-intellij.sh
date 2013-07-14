@@ -19,7 +19,7 @@ if [ -f "${CACHE}/${ARCHIVE}" ]; then
   echo "IntelliJ IDEA already cached.  Not downloading." 
 else
   echo "Downloading IntelliJ IDEA..."
-  wget --quiet --output-document=${CACHE}/${ARCHIVE} http://home.comcast.net/~kurr/vagrant/ideaIU-12.1.4.tar.gz
+  wget --quiet --output-document=${CACHE}/${ARCHIVE} http://download.jetbrains.com/idea/ideaIU-12.1.4.tar.gz 
 fi
 mkdir -p ${IDEADIR}
 tar --gzip --extract --file=${CACHE}/${ARCHIVE} --directory=${IDEADIR}
