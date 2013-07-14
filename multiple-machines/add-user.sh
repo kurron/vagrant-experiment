@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-USERNAME=logan
+USERNAME=$1
 
 # make sure we are idempotent
 if [ -f "/var/vagrant_add_user" ]; then
