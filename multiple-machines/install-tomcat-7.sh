@@ -22,7 +22,7 @@ else
 fi
 
 mkdir -p ${TOMCATDIR}
-tar --gzip --extract --verbose --file=${CACHE}/${ARCHIVE} --directory=${TOMCATDIR}
+tar --gzip --extract --file=${CACHE}/${ARCHIVE} --directory=${TOMCATDIR}
 chown -R root:root ${TOMCATDIR}/apache-tomcat-7.0.42
 cd ${TOMCATDIR} ; ln -s apache-tomcat-7.0.42 tomcat-7 ; ls -lh
 

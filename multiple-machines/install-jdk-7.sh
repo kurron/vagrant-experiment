@@ -18,7 +18,7 @@ else
   wget --quiet --output-document=${CACHE}/${ARCHIVE} http://home.comcast.net/~kurr/vagrant/jdk-7u25-linux-x64.gz
 fi
 mkdir -p ${JVMDIR}
-tar --gzip --extract --verbose --file=${CACHE}/${ARCHIVE} --directory=${JVMDIR}
+tar --gzip --extract --file=${CACHE}/${ARCHIVE} --directory=${JVMDIR}
 chown -R root:root ${JVMDIR}/jdk1.7.0_25
 cd ${JVMDIR} ; ln -s jdk1.7.0_25 oracle-jdk-7 ; ls -lh
 

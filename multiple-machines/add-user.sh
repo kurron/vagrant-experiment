@@ -8,18 +8,9 @@ if [ -f "/var/vagrant_add_user" ]; then
 fi
 
 # Actual shell commands here.
-echo "Adding user " $USERNAME
-useradd $USERNAME -m -s /bin/bash
-addgroup $USERNAME
-adduser $USERNAME $USERNAME
-adduser $USERNAME adm
-adduser $USERNAME cdrom
-adduser $USERNAME sudo
-adduser $USERNAME dip
-adduser $USERNAME plugdev
-adduser $USERNAME lpadm
-adduser $USERNAME sambashare
-
+echo "Adding user " ${USERNAME}
+aptitude install whois 
+useradd ${USERNAME} --comment ${USERNAME} --groups adm,cdrom,sudo,dip,plugdev,lpadmin,sambashare --create-home --shell /bin/bash --user-group --password `mkpasswd ${USERNAME}` 
 
 # signal a successful provision
 touch /var/vagrant_add_user
