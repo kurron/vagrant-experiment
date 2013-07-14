@@ -65,7 +65,7 @@ Vagrant.configure("2") do |config|
       ide.vm.provision "shell", path: "install-sts.sh", args: "devan"
       ide.vm.provision "shell", path: "install-gts.sh", args: "devan"
       ide.vm.provision "shell", path: "install-db-visualizer.sh", args: "devan"
-#     ide.vm.provision "shell", path: "install-logfaces-client.sh", args: "devan"
+      ide.vm.provision "shell", path: "install-logfaces-client.sh", args: "devan"
       ide.vm.provider "virtualbox" do |v|
           v.name = "ide"
           v.gui = true
