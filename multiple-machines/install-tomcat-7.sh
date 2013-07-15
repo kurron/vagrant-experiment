@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+DONEFILE=/var/vagrant-tomcat-7
+
 # make sure we are idempotent
-if [ -f "/var/vagrant_tomcat_7" ]; then
+if [ -f "${DONEFILE}" ]; then
     exit 0
 fi
 
@@ -27,4 +29,4 @@ chown -R root:root ${TOMCATDIR}/apache-tomcat-7.0.42
 cd ${TOMCATDIR} ; ln -s apache-tomcat-7.0.42 tomcat-7 ; ls -lh
 
 # signal a successful provision
-touch /var/vagrant_tomcat_7
+touch ${DONEFILE}

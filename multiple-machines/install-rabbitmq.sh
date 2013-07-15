@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+DONEFILE=/var/vagrant-rabbitmq
+
 # make sure we are idempotent
-if [ -f "/var/vagrant_rabbitmq" ]; then
+if [ -f "${DONEFILE}" ]; then
     exit 0
 fi
 
@@ -10,4 +12,4 @@ echo "Installing RabbitMQ Server..."
 aptitude install -y rabbitmq-server 
 
 # signal a successful provision
-touch /var/vagrant_rabbitmq
+touch ${DONEFILE}

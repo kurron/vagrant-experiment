@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+DONEFILE=/var/vagrant-mongodb
+
 # make sure we are idempotent
-if [ -f "/var/vagrant_monbodb" ]; then
+if [ -f "${DONEFILE}" ]; then
     exit 0
 fi
 
@@ -10,4 +12,4 @@ echo "Installing MongoDB..."
 aptitude install -y mongodb 
 
 # signal a successful provision
-touch /var/vagrant_mongodb
+touch ${DONEFILE}

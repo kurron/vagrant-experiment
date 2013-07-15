@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+DONEFILE=/var/vagrant-mysql-client
+
 # make sure we are idempotent
-if [ -f "/var/vagrant_mysql_client" ]; then
+if [ -f "${DONEFILE}" ]; then
     exit 0
 fi
 
@@ -10,4 +12,4 @@ echo "Installing MySQL Client..."
 aptitude install -y mysql-client 
 
 # signal a successful provision
-touch /var/vagrant_mysql_client
+touch ${DONEFILE}

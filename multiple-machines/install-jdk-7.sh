@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+DONEFILE=/var/vagrant-jdk-7
+
 # make sure we are idempotent
-if [ -f "/var/vagrant_jdk_7" ]; then
+if [ -f "${DONEFILE}" ]; then
     exit 0
 fi
 
@@ -23,4 +25,4 @@ chown -R root:root ${JVMDIR}/jdk1.7.0_25
 cd ${JVMDIR} ; ln -s jdk1.7.0_25 oracle-jdk-7 ; ls -lh
 
 # signal a successful provision
-touch /var/vagrant_jdk_7
+touch ${DONEFILE}

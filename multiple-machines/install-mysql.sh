@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
+DONEFILE=/var/vagrant-mysql
+
 # make sure we are idempotent
-if [ -f "/var/vagrant_mysql" ]; then
+if [ -f "${DONEFILE}" ]; then
     exit 0
 fi
 
@@ -14,4 +16,4 @@ restart mysql
 mysql -uroot mysql <<< "GRANT ALL ON *.* TO 'root'@'%'; FLUSH PRIVILEGES;"
 
 # signal a successful provision
-touch /var/vagrant_mysql
+touch ${DONEFILE}
