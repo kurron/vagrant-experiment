@@ -73,4 +73,14 @@ Vagrant.configure("2") do |config|
           v.customize ["modifyvm", :id, "--vram", "32"]
       end
   end
+
+  config.vm.define "redis" do |redis|
+      redis.vm.hostname = "redis"
+      redis.vm.provision :shell, path: "install-redis.sh"
+      redis.vm.network :private_network, ip: "192.168.33.60"
+      redis.vm.provider "virtualbox" do |v|
+          v.name = "redis"
+      end
+  end
+
 end
