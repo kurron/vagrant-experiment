@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=logFACES
+Comment=Logging client
+Exec=/home/kal-el/Software/logFacesClient/logfaces
+Icon=/home/kal-el/Software/logFacesClient/icon.xpm
+Path=
+Terminal=false
+StartupNotify=true

@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=DbVisualier
+Comment=Database Viewer
+Exec=/home/kal-el/Software/DbVisualizer/dbvis
+Icon=/home/kal-el/Software/DbVisualizer/.install4j/i4j_extf_2_1bd0g0g_x4q5yx.png
+Path=
+Terminal=false
+StartupNotify=true
