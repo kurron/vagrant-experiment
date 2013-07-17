@@ -11,6 +11,7 @@ fi
 CACHE=/vagrant/file-cache
 ARCHIVE=jdk7.tar.gz
 JVMDIR=/usr/lib/jvm
+
 echo "Installing Oracle JDK 7..."
 mkdir -p ${CACHE}
 if [ -f "${CACHE}/${ARCHIVE}" ]; then
@@ -23,6 +24,9 @@ mkdir -p ${JVMDIR}
 tar --gzip --extract --file=${CACHE}/${ARCHIVE} --directory=${JVMDIR}
 chown -R root:root ${JVMDIR}/jdk1.7.0_25
 cd ${JVMDIR} ; ln -s jdk1.7.0_25 oracle-jdk-7 ; ls -lh
+
+sed -i '$a JAVA_HOME=/usr/lib/jvm/oracle-jdk-7' /etc/environment
+cat /etc/environment
 
 # signal a successful provision
 touch ${DONEFILE}
