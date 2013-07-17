@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=STS
+Comment=Spring Tool Suite
+Exec=/home/kal-el/Software/springsource/sts-3.3.0.RELEASE/STS
+Icon=/home/kal-el/Software/springsource/sts-3.3.0.RELEASE/icon.xpm
+Path=
+Terminal=false
+StartupNotify=true

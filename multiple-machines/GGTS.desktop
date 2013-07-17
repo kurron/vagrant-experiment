@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=GGTS
+Comment=Groovy Grails Tool Suite
+Exec=/home/kal-el/Software/springsource/ggts-3.3.0.RELEASE/GGTS
+Icon=/home/kal-el/Software/springsource/ggts-3.3.0.RELEASE/icon.xpm
+Path=
+Terminal=false
+StartupNotify=true
