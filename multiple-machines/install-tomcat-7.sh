@@ -9,7 +9,7 @@ fi
 
 # Actual shell commands here.
 CACHE=/vagrant/file-cache
-ARCHIVE=tomcat.tar.gz
+ARCHIVE=tomcat-7.0.42.tar.gz
 TOMCATDIR=/usr/lib/apache-tomcat
 
 echo "Installing Tomcat 7..."
