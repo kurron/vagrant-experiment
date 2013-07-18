@@ -69,6 +69,7 @@ Vagrant.configure("2") do |config|
       ide.vm.provision "shell", path: "install-db-visualizer.sh", args: "kal-el"
       ide.vm.provision "shell", path: "install-logfaces-client.sh", args: "kal-el"
       ide.vm.provision "shell", path: "install-desktop-launchers.sh", args: "kal-el"
+      ide.vm.provision "shell", path: "install-development-tomcat-7.sh", args: "kal-el"
       ide.vm.provider "virtualbox" do |v|
           v.name = "ide"
           v.gui = true
