@@ -64,6 +64,7 @@ Vagrant.configure("2") do |config|
       ide.vm.provision "shell", path: "install-vcs.sh"
       ide.vm.provision "shell", path: "install-mysql-workbench.sh"
       ide.vm.provision "shell", path: "install-ffmpeg.sh"
+      ide.vm.provision "shell", path: "correct-gnome-keyring.sh"
       ide.vm.provision "shell", path: "install-intellij.sh", args: "kal-el"
       ide.vm.provision "shell", path: "install-sts.sh", args: "kal-el"
       ide.vm.provision "shell", path: "install-gts.sh", args: "kal-el"
