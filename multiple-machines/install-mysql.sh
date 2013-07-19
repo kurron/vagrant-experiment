@@ -11,7 +11,9 @@ fi
 echo "Installing MySQL Server..."
 export DEBIAN_FRONTEND=noninteractive
 aptitude install -y mysql-server 
-sed -i -e 's/127.0.0.1/0.0.0.0/' /etc/mysql/my.cnf
+sed -i '$a [mysqld]' /etc/mysql/my.cnf 
+sed -i '$a character-set-server=utf8' /etc/mysql/my.cnf 
+sed -i '$a bind-address=*' /etc/mysql/my.cnf 
 restart mysql
 mysql -uroot mysql <<< "GRANT ALL ON *.* TO 'root'@'%'; FLUSH PRIVILEGES;"
 
