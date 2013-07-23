@@ -23,7 +23,7 @@ fi
 mkdir -p ${JVMDIR}
 tar --gzip --extract --file=${CACHE}/${ARCHIVE} --directory=${JVMDIR}
 chown -R root:root ${JVMDIR}/jdk1.7.0_25
-cd ${JVMDIR} ; ln -s jdk1.7.0_25 oracle-jdk-7 ; ls -lh
+cd ${JVMDIR} ; ln -s jdk1.7.0_25 oracle-jdk-7 ; ln -s jdk1.7.0_25 default-java ; ls -lh
 
 sed -i '$a JAVA_HOME=/usr/lib/jvm/oracle-jdk-7' /etc/environment
 sed -i '$a JDK_HOME=/usr/lib/jvm/oracle-jdk-7' /etc/environment

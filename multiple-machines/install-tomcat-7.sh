@@ -27,6 +27,22 @@ mkdir -p ${TOMCATDIR}
 tar --gzip --extract --file=${CACHE}/${ARCHIVE} --directory=${TOMCATDIR}
 chown -R root:root ${TOMCATDIR}/apache-tomcat-7.0.42
 cd ${TOMCATDIR} ; ln -s apache-tomcat-7.0.42 tomcat-7 ; ls -lh
+ln -s ${TOMCATDIR}/apache-tomcat-7.0.42 /usr/share/tomcat7
+mkdir -p /var/lib/tomcat7
+cp -a /usr/share/tomcat7/conf /var/lib/tomcat7
+mkdir /var/lib/tomcat7/common 
+mkdir /var/lib/tomcat7/logs 
+mkdir /var/lib/tomcat7/temp 
+mkdir /var/lib/tomcat7/server 
+mkdir /var/lib/tomcat7/shared 
+mkdir -p /var/lib/tomcat7/webapps/ROOT
+mkdir /var/lib/tomcat7/work
+tar --extract --verbose --file=/vagrant/tomcat.tar --directory=/etc
+cp -R /etc/tomcat7/policy.d /var/lib/tomcat7/conf
+chown -R tomcat7:tomcat7 /var/lib/tomcat7
+
+cp /vagrant/tomcat7 /etc/init.d/tomcat7
+/etc/init.d/tomcat7 restart
 
 # signal a successful provision
 touch ${DONEFILE}
