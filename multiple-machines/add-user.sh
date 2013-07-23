@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 USERNAME=$1
-DONEFILE=/var/vagrant-add-user
+DONEFILE=/var/vagrant-add-user-$USERNAME
 
 # make sure we are idempotent
 if [ -f "${DONEFILE}" ]; then
