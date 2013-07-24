@@ -30,5 +30,7 @@ sed -i '$a JDK_HOME=/usr/lib/jvm/oracle-jdk-7' /etc/environment
 
 cat /etc/environment
 
+ln -s /usr/lib/jvm/oracle-jdk-7/bin/* /usr/local/bin
+
 # signal a successful provision
 touch ${DONEFILE}
