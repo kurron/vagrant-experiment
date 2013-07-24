@@ -24,7 +24,7 @@ fi
 mkdir -p ${TARGET}
 tar --gzip --extract --file=${CACHE}/${ARCHIVE} --directory=${TARGET}
 chown -R ${ACCOUNT}:${ACCOUNT} ${ACCOUNTDIR}
-ln -s ${JAVA_HOME}/jre ${TARGET}/springsource/sts-3.3.0.RELEASE
+#ln -s ${JAVA_HOME}/jre ${TARGET}/springsource/sts-3.3.0.RELEASE
 
 # signal a successful provision
 touch ${DONEFILE} 
