@@ -42,6 +42,7 @@ cp -R /etc/tomcat7/policy.d /var/lib/tomcat7/conf
 chown -R tomcat7:tomcat7 /var/lib/tomcat7
 
 cp /vagrant/tomcat7 /etc/init.d/tomcat7
+update-rc.d tomcat7 defaults
 /etc/init.d/tomcat7 restart
 
 # signal a successful provision
